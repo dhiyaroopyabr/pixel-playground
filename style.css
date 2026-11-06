@@ -9,6 +9,7 @@
   --accent: #70edcf;
   --spark: #ffdc76;
   --drone: #ff778e;
+  --echo: #c1a5ff;
   font-family: system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -24,6 +25,8 @@ header > p:last-child { color: var(--muted); margin-bottom: 0; }
 .hud, .legend { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 14px; padding: 10px 14px; color: var(--muted); }
 .hud strong { color: var(--text); font-size: 1.2rem; margin-left: 5px; }
 .stage { position: relative; }
+.echo-notice { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); pointer-events: none; white-space: nowrap; color: var(--echo); background: var(--page); border: 1px solid var(--echo); border-radius: 8px; padding: 4px 10px; font: 700 .75rem/1.4 ui-monospace, monospace; }
+.echo-notice:empty { opacity: 0; }
 canvas { display: block; width: 100%; height: auto; background: var(--page); }
 canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
 .overlay { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; background: #080f1bd9; padding: 8px; }
@@ -36,6 +39,7 @@ button:focus-visible { outline: 2px solid white; outline-offset: 3px; }
 kbd { color: var(--text); font: inherit; }
 .spark { color: var(--spark); }
 .drone { color: var(--drone); }
+.echo, #echo-count { color: var(--echo); }
 .touch { display: none; justify-content: center; gap: 8px; margin-top: 14px; }
 .touch button { min-width: 48px; touch-action: none; user-select: none; }
 footer { margin-top: 16px; color: var(--muted); }

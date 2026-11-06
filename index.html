@@ -12,16 +12,18 @@
     <header>
       <p class="eyebrow">CTRL + PLAY <span> / </span> NIT CALICUT</p>
       <h1>Pixel <em>Playground</em></h1>
-      <p id="mission">Collect sparks. Dodge drones. See how long you last.</p>
+      <p id="mission">Collect sparks and dodge drones. Every five sparks summons an Echo of your past movements.</p>
     </header>
     <section class="cabinet" aria-label="Arcade game">
       <div class="hud">
-        <div>Score <strong id="score">0</strong></div>
+        <div>Sparks <strong id="score">0</strong></div>
         <div>Level <strong id="level">1</strong></div>
         <div>Best <strong id="best">0</strong></div>
+        <div>Echoes <strong id="echo-count">0</strong></div>
       </div>
       <div class="stage">
         <canvas id="arena" width="720" height="432" tabindex="0" aria-label="Game arena" aria-describedby="mission controls">This game requires Canvas support.</canvas>
+        <div class="echo-notice" id="echo-notice" role="status"></div>
         <div class="overlay" id="overlay">
           <div>
             <p class="eyebrow" id="status" role="status">READY TO PLAY</p>
@@ -33,7 +35,7 @@
       </div>
       <div class="legend" id="controls">
         <span><kbd>WASD</kbd> or <kbd>↑ ← ↓ →</kbd> to move</span>
-        <span><b class="spark">◆</b> Spark &nbsp; <b class="drone">✕</b> Drone</span>
+        <span><b class="spark">◆</b> Spark &nbsp; <b class="drone">✕</b> Drone &nbsp; <b class="echo">□</b> Echo</span>
       </div>
     </section>
     <div class="touch" aria-label="Direction controls">
